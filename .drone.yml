@@ -3,10 +3,26 @@ type: docker
 name: da1
 
 steps:
-- name: build
+- name: da1-test
   image: maven:3.6
   commands:
   - mvn --version
+
+trigger:
+  branch:
+  - master
+
+kind: pipeline
+type: ssh
+name: drs1
+
+steps:
+- name: drs1-test
+  commands:
+  - ls -al
+
+depends_on:
+- da1
 
 trigger:
   branch:
