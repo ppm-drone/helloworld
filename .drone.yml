@@ -7,7 +7,6 @@ steps:
   image: maven:3.6
   commands:
   - mvn --version
-  - ls
 
 trigger:
   branch:
