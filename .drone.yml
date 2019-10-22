@@ -1,1 +1,13 @@
+kind: pipeline
+type: exec
+name: default
 
+steps:
+- name: build
+  commands:
+  - go build
+  - go test
+
+trigger:
+  branch:
+  - master
