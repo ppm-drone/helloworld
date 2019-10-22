@@ -12,6 +12,7 @@ trigger:
   branch:
   - master
 
+---
 kind: pipeline
 type: ssh
 name: drs1
